@@ -31,7 +31,7 @@ type StationResponseObj = {
 };
 
 export type Station = {
-  Id: string;
+  id: string;
   latitude: number;
   longitude: number;
   address: string; // gonna use a simple concatenated string for now
@@ -57,7 +57,7 @@ const parseStationResponse = (
       },
     }) => {
       return {
-        Id: String(ID),
+        id: String(ID),
         latitude: Latitude,
         longitude: Longitude,
         address: `${AddressLine1}\n${Town}, ${StateOrProvince} ${Postcode}`,
